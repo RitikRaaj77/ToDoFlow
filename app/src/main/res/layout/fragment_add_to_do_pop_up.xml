@@ -46,6 +46,9 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/todoEt"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    android:textCursorDrawable="@null"
                     android:layout_width="match_parent"
                     android:textColorHint="@color/shade1"
                     android:textColor="@color/shade1"
