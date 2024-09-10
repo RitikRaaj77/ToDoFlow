@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "92311183222",
+    "project_id": "todo-flow-25b1e",
+    "storage_bucket": "todo-flow-25b1e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:92311183222:android:48a9f5f50e8d48ba8ce457",
+        "android_client_info": {
+          "package_name": "com.example.todoflow"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpNucm29zMZ9bBlAYTdD7aOaHPMaguRhQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
