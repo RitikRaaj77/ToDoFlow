@@ -54,7 +54,7 @@
                     android:textColor="@color/shade1"
                     android:layout_height="50dp"
                     android:background="@color/shade2"
-                    android:hint="Add your Tasks"
+                    android:hint="Add your Task"
                     android:inputType="text"
                     android:paddingStart="12dp"
                     android:paddingTop="15dp" />
