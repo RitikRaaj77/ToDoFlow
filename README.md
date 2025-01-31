@@ -1,4 +1,4 @@
-# ToDo Flow - Task Management App | [Website](https://github.com/RitikRaaj77/ToDoFlow)
+# ToDo Flow - Task Management App | [Website](https://ritikraaj77.github.io/ToDoFlow/)
 
 ## Introduction
 
