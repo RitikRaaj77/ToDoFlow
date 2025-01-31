@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo FLowx</title>
+    <link rel="shortcut icon" href="./assets/TODOFLOW.png" type="image/png">
+    <style>
+        :root {
+            --background-primary: #141414;
+            --background-secondary: #141414;
+
+            --action-primary: hsl(214, 32%, 91%);
+            --action-secondary: hsl(210, 38%, 95%);
+
+            --foreground-primary: hsl(214, 32%, 91%);
+            --foreground-secondary: hsl(216, 15%, 52%);
+            --foreground-tertiary: hsl(214, 20%, 69%);
+
+            --accent: #9C6769;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-primary);
+            color: var(--foreground-primary);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: var(--accent);
+            color: var(--action-primary);
+            text-align: center;
+            padding: 25px 0;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .col-2 {
+            flex-basis: calc(28.57% - 20px);
+            margin-bottom: 20px;
+        }
+
+        .col-3 {
+            flex-basis: calc(42.86% - 20px);
+            margin-bottom: 20px;
+        }
+
+        .image-container {
+            position: relative;
+            padding-top: 222.22%;
+            /* 1280 / 576 = 2.2222 (aspect ratio) */
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .image-container img,
+        .image-container video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            /* To fit the entire video without cropping */
+        }
+
+        .text-content {
+            background-color: var(--background-secondary);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2,
+        h3 {
+            color: var(--accent);
+        }
+
+        p,
+        li {
+            color: var(--foreground-tertiary);
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li::before {
+            content: "•";
+            color: var(--accent);
+            margin-right: 10px;
+        }
+
+        @media (max-width: 768px) {
+
+            .col-2,
+            .col-3 {
+                flex-basis: 100%;
+            }
+        }
+
+        .custom-header {
+            font-size: 4rem;
+        }
+
+        .white-text {
+            color: var(--foreground-secondary);
+        }
+
+        .left-image {
+            display: inline-block;
+            margin-top: 20px;
+            margin-right: 15px;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            /* Ensures the content fills the circle */
+            border-radius: 50%;
+            /* Makes the content circular */
+            vertical-align: top;
+            /* Align the images with the top of the text */
+        }
+
+        .fade-in-part {
+            opacity: 0;
+            transition: opacity 0.9s ease-in-out;
+        }
+
+        .fade-in-part.show {
+            opacity: 1;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const fadeInParts = document.querySelectorAll('.fade-in-part');
+            fadeInParts.forEach((part, index) => {
+                setTimeout(() => {
+                    part.classList.add('show');
+                }, index * 200); // Adjust the multiplier (200ms) as needed for timing
+            });
+        });
+    </script>
+</head>
+
+<body>
+<header>
+    <div style="width: 80px; border: 1px solid #1270d9"></div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-2">
+<!--            <div class="image-container">-->
+<!--                <video autoplay loop muted>-->
+<!--                    <source src="assets/video.mp4" type="video/mp4">-->
+<!--                    Your browser does not support the video tag.-->
+<!--                </video>-->
+<!--            </div>-->
+            <div class="image-container">
+                <img src="assets/1.png" alt="Login Screen">
+            </div>
+            <div class="image-container">
+                <img src="assets/3.png" alt="Login Screen">
+            </div>
+            <div class="image-container">
+                <img src="assets/5.png" alt="User List">
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="image-container">
+                <img src="assets/2.png" alt="Chat Screen">
+            </div>
+            <div class="image-container">
+                <img src="assets/4.png" alt="Message Bubble">
+            </div>
+            <div class="image-container">
+                <img src="assets/6.png" alt="Firebase Integration">
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="text-content">
+                <h1 class="custom-header fade-in-part">ToDo Flow</h1>
+                <img src="assets/TODOFLOW.png" alt="Description" class="left-image fade-in-part">
+                <a href="https://github.com/RitikRaaj77/ToDoFlow">
+                    <img src="assets/gitsvg.svg" alt="SVG Icon" class="left-image fade-in-part">
+                </a>
+                <h2 class="fade-in-part">A Task Management Application</h2>
+                <h3 class="fade-in-part white-text">
+                    A feature-rich task management application designed to help users efficiently organize and track their daily tasks. Users can add, update, and delete tasks while ensuring real-time synchronization with Firebase.
+                </h3>
+
+                <h3 class="fade-in-part">Key Features</h3>
+                <ul>
+                    <li class="fade-in-part">Add, edit, and delete tasks with a user-friendly interface</li>
+                    <li class="fade-in-part">Real-time task synchronization using Firebase Realtime Database</li>
+                    <li class="fade-in-part">Secure user authentication with Firebase Authentication</li>
+                    <li class="fade-in-part">RecyclerView for smooth and efficient task display</li>
+                    <li class="fade-in-part">MVVM architecture for structured and maintainable code</li>
+                </ul>
+
+                <h3 class="fade-in-part">Technical Details</h3>
+                <ul>
+                    <li class="fade-in-part">Follows MVVM (Model-View-ViewModel) architecture for scalability and maintainability</li>
+                    <li class="fade-in-part">Firebase Authentication for secure login and session management</li>
+                    <li class="fade-in-part">Firebase Realtime Database for instant task storage and retrieval</li>
+                    <li class="fade-in-part">Navigation Component for seamless screen transitions</li>
+                    <li class="fade-in-part">Dialog Fragment for adding and editing tasks efficiently</li>
+                </ul>
+
+                <h3 class="fade-in-part">Tools & Libraries</h3>
+                <ul>
+                    <li class="fade-in-part">Languages: Kotlin</li>
+                    <li class="fade-in-part">Database: Firebase Realtime Database</li>
+                    <li class="fade-in-part">Authentication: Firebase Authentication</li>
+                    <li class="fade-in-part">UI/UX: Material Design, RecyclerView, Android Jetpack Components</li>
+                    <li class="fade-in-part">Navigation: Jetpack Navigation Component</li>
+                </ul>
+
+                <h3 class="fade-in-part">Outcomes</h3>
+                <ul>
+                    <li class="fade-in-part">Successfully built a task management app with real-time synchronization</li>
+                    <li class="fade-in-part">Demonstrated expertise in Firebase Authentication and data management</li>
+                    <li class="fade-in-part">Implemented MVVM for scalable and maintainable architecture</li>
+                </ul>
+
+                <h3 class="fade-in-part">Key Challenges & Solutions</h3>
+                <ul>
+                    <li class="fade-in-part"><strong>Challenge</strong>: Ensuring real-time synchronization of tasks across sessions</li>
+                    <li class="fade-in-part"><strong>Solution</strong>: Used Firebase Database listeners to provide instant updates</li>
+                    <li class="fade-in-part"><strong>Challenge</strong>: Maintaining a clean and scalable architecture</li>
+                    <li class="fade-in-part"><strong>Solution</strong>: Adopted MVVM pattern for better separation of concerns</li>
+                </ul>
+
+                <h3 class="fade-in-part">Future Enhancements</h3>
+                <ul>
+                    <li class="fade-in-part">Implementing task reminders and notifications</li>
+                    <li class="fade-in-part">Adding task categorization and filtering features</li>
+                    <li class="fade-in-part">Introducing collaborative task management for team-based productivity</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
